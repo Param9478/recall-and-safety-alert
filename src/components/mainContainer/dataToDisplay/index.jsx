@@ -27,12 +27,15 @@ const DataToDisplay = () => {
   return (
     <div className="max-w-7xl mx-auto">
       <DataList data={currentData} />
+
       {listData.length ? (
-        <Pagination
-          setCurrentData={setCurrentData}
-          itemsPerPage={itemsPerPage}
-          listData={listData}
-        />
+        <div className="border flex justify-center mt-5">
+          <Pagination
+            setCurrentData={setCurrentData}
+            itemsPerPage={itemsPerPage}
+            listData={listData}
+          />
+        </div>
       ) : null}
     </div>
   );
