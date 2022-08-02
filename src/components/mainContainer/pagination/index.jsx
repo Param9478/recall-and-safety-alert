@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
-import "../../../App.css";
+import "./pagination.css";
 
 function Pagination({ setCurrentData, itemsPerPage, listData }) {
   const [pageCount, setPageCount] = useState(0);
