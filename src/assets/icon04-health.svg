@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="105" height="105" viewBox="0 0 105 105">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #3a8653;
+      }
+
+      .cls-3 {
+        opacity: 0.15;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <rect class="cls-1" width="105" height="105"/>
+        <g id="illustration-health">
+          <g>
+            <path class="cls-2" d="M2.5,2.5H52.84c43.9,0,66.63,53.06,34.69,85s-85,9.21-85-34.66Z"/>
+            <g class="cls-3">
+              <circle cx="52.25" cy="52.25" r="39.37" transform="translate(-0.89 0.91) rotate(-0.99)"/>
+            </g>
+          </g>
+          <g>
+            <rect class="cls-4" x="45.85" y="31.97" width="12.45" height="40.92" rx="2.23"/>
+            <rect class="cls-4" x="45.86" y="31.97" width="12.44" height="40.92" rx="2.23" transform="translate(104.51 0.36) rotate(90)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
