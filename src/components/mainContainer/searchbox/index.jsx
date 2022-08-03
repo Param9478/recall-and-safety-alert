@@ -6,7 +6,7 @@ const SearchBox = ({ setSearchedData }) => {
   return (
     <div className="lg:flex lg:items-center lg:space-x-10">
       <div className="lg:rounded-br-[8rem] border-t md:rounded-none overflow-hidden shadow lg:w-3/4 h-64 bg-[#6D6E71]">
-        <div className="lg:max-w-4xl mx-auto">
+        <div className="flex-1 lg:max-w-4xl mx-auto px-6">
           <h2 className="sr-only" id="profile-overview-title">
             Search Box
           </h2>
@@ -55,8 +55,9 @@ const SearchBox = ({ setSearchedData }) => {
           </div>
         </div>
       </div>
-
-      <SymbolCards />
+      <div className="px-10 sm:px-8">
+        <SymbolCards />
+      </div>
 
       {/* <Motion /> */}
     </div>

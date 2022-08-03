@@ -7,7 +7,7 @@ const DataToDisplay = ({ listData }) => {
   const [currentData, setCurrentData] = useState(null);
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto px-6">
       <DataList data={currentData} />
 
       <div className="flex justify-center mt-5">

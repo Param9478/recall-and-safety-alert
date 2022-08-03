@@ -5,7 +5,7 @@ import MainContainer from "./mainContainer";
 
 const Components = () => {
   return (
-    <div className=" mx-auto px-4 sm:px-6 lg:px-0">
+    <div className=" mx-auto lg:px-0">
       <Header />
       <MainContainer />
     </div>
