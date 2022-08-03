@@ -2,7 +2,7 @@ import SymbolCards from "./symbolsCards";
 // import ListboxFilter from "./listboxFilter";
 // import Motion from "./motion";
 
-const SearchBox = ({ setSearchedData }) => {
+const SearchBox = ({ setSearchedData, setCategory }) => {
   return (
     <div className="lg:flex lg:items-center lg:space-x-10">
       <div className="lg:rounded-br-[8rem] border-t md:rounded-none overflow-hidden shadow lg:w-3/4 h-64 bg-[#6D6E71]">
@@ -56,7 +56,7 @@ const SearchBox = ({ setSearchedData }) => {
         </div>
       </div>
       <div className="px-10 sm:px-8">
-        <SymbolCards />
+        <SymbolCards setCategory={setCategory} />
       </div>
 
       {/* <Motion /> */}
