@@ -1,7 +1,7 @@
-import iconFood from "../../../assets/icon01-food.svg";
+import iconFood from "../../../assets/list-icon-food.svg";
 import iconTransport from "../../../assets/icon02-transport.svg";
-import iconHealth from "../../../assets/icon04-health.svg";
-import iconProducts from "../../../assets/icon03-products.svg";
+import iconHealth from "../../../assets/list-icon-health.svg";
+import iconProducts from "../../../assets/list-icon-product.svg";
 
 const alert = (
   <div
