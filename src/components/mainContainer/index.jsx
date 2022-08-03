@@ -8,7 +8,6 @@ const MainContainer = () => {
 
   const [searchedData, setSearchedData] = useState("");
 
-
   useEffect(() => {
     dataListService
       .getAll()
@@ -21,9 +20,9 @@ const MainContainer = () => {
       });
   }, []);
 
-  const filteredData = listData.filter((data) => {
+  const filteredData = listData?.filter((data) => {
     if (searchedData === "") {
-      return listData;
+      return data;
     } else {
       return data.title.toLowerCase().includes(searchedData);
     }
