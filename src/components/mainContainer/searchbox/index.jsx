@@ -25,7 +25,7 @@ const SearchBox = ({ setSearchedData }) => {
                   id="search"
                   className="shadow-sm  focus:outline-none p-2 sm:p-4 block w-full pr-12 sm:text-sm border-gray-300 rounded-3xl"
                   onChange={(e) =>
-                    setSearchedData(e.target.value)
+                    setSearchedData(e.target.value.toLocaleLowerCase())
                   }
                 />
                 <div className="absolute inset-y-0 right-0 flex py-1.5 pr-1.5">
