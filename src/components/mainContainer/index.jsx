@@ -8,7 +8,6 @@ const MainContainer = () => {
 
   const [searchedData, setSearchedData] = useState("");
 
-  console.log(searchedData);
 
   useEffect(() => {
     dataListService
@@ -29,7 +28,6 @@ const MainContainer = () => {
       return data.title.toLowerCase().includes(searchedData);
     }
   });
-  console.log(filteredData);
   return (
     <>
       <SearchBox setSearchedData={setSearchedData} />
