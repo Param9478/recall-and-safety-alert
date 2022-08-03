@@ -5,6 +5,7 @@ import dataListService from "../services/fetchedDataList";
 
 const MainContainer = () => {
   const [listData, setListData] = useState([]);
+  const [category, setCategory] = useState("");
 
   const [searchedData, setSearchedData] = useState("");
 
@@ -12,13 +13,23 @@ const MainContainer = () => {
     dataListService
       .getAll()
       .then((res) => {
-        setListData(res.results.ALL);
+        if (category === "FOOD") {
+          setListData(res.results.FOOD);
+        } else if (category === "VEHICLE") {
+          setListData(res.results.VEHICLE);
+        } else if (category === "CPS") {
+          setListData(res.results.CPS);
+        } else if (category === "HEALTH") {
+          setListData(res.results.HEALTH);
+        } else {
+          setListData(res.results.ALL);
+        }
       })
       .catch((error) => {
         console.log(error);
         alert(error.message);
       });
-  }, []);
+  }, [category]);
 
   const filteredData = listData?.filter((data) => {
     if (searchedData === "") {
@@ -29,7 +40,7 @@ const MainContainer = () => {
   });
   return (
     <>
-      <SearchBox setSearchedData={setSearchedData} />
+      <SearchBox setSearchedData={setSearchedData} setCategory={setCategory} />
       <DataToDisplay listData={filteredData} />
     </>
   );

@@ -50,18 +50,20 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function SymbolCards() {
+export default function SymbolCards({ setCategory }) {
   return (
     <ul className="w-52 lg:w-40 grid grid-cols-4 lg:grid-cols-2">
-      {projects.map((person) => (
-        <li key={person.name}>
+      {projects.map((data) => (
+        <li key={data.name}>
           <div
             className={classNames(
-              person.logoColor,
+              data.logoColor,
               " text-white lg:w-20 lg:h-20 w-12 h-12 lg:mt-0 mt-3 rounded-full"
             )}
           >
-            <img className="cover " src={person.icon} alt="food" />
+            <button type="button" onClick={() => setCategory(data.name)}>
+              <img className="cover " src={data.icon} alt="food" />
+            </button>
           </div>
         </li>
       ))}
