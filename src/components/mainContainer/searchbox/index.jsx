@@ -2,7 +2,7 @@ import SymbolCards from "./symbolsCards";
 // import ListboxFilter from "./listboxFilter";
 // import Motion from "./motion";
 
-const SearchBox = () => {
+const SearchBox = ({ setSearchedData }) => {
   return (
     <div className="lg:flex lg:items-center lg:space-x-10">
       <div className="lg:rounded-br-[8rem] border-t md:rounded-none overflow-hidden shadow lg:w-3/4 h-64 bg-[#6D6E71]">
@@ -24,6 +24,9 @@ const SearchBox = () => {
                   name="search"
                   id="search"
                   className="shadow-sm  focus:outline-none p-2 sm:p-4 block w-full pr-12 sm:text-sm border-gray-300 rounded-3xl"
+                  onChange={(e) =>
+                    setSearchedData(e.target.value)
+                  }
                 />
                 <div className="absolute inset-y-0 right-0 flex py-1.5 pr-1.5">
                   <kbd className="hidden sm:inline-flex items-center border border-gray-200 bg-[#6D6E71] focus:ring-0 focus:ring-offset-0 rounded-2xl px-2 text-md font-sans font-medium text-white">

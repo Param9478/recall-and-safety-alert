@@ -1,38 +1,20 @@
-import { useEffect, useState } from "react";
-import dataListService from "../../services/fetchedDataList";
+import { useState } from "react";
+
 import DataList from "./dataList";
 import Pagination from "../pagination";
 
-const DataToDisplay = () => {
-  const [listData, setListData] = useState([]);
-
+const DataToDisplay = ({ listData }) => {
   const [currentData, setCurrentData] = useState(null);
-
-  const itemsPerPage = 3;
-
-  useEffect(() => {
-    dataListService
-      .getAll()
-      .then((res) => {
-        setListData(res.results.ALL);
-      })
-      .catch((error) => {
-        console.log(error);
-        alert(error.message);
-      });
-  }, []);
-
-  console.log(listData);
 
   return (
     <div className="max-w-7xl mx-auto">
       <DataList data={currentData} />
 
       {listData.length ? (
-        <div className="border flex justify-center mt-5">
+        <div className="flex justify-center mt-5">
           <Pagination
             setCurrentData={setCurrentData}
-            itemsPerPage={itemsPerPage}
+            itemsPerPage={4}
             listData={listData}
           />
         </div>
