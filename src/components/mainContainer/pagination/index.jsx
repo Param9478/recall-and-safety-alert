@@ -8,6 +8,7 @@ export default function Pagination({
   paginateFront,
   paginateBack,
   indexOfLastPost,
+  dataLang,
 }) {
   const pageNumbers = [];
 
@@ -37,18 +38,20 @@ export default function Pagination({
         <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
           <div>
             <p className="text-sm text-gray-700">
-              Showing{" "}
+              {dataLang === "en" ? "Showing" : "Affichage de"}
               <span className="font-medium">
                 {" "}
-                {currentPage * postsPerPage - 3}{" "}
+                {currentPage === 1 ? 1 : currentPage * postsPerPage - 3}{" "}
               </span>
-              to
+              {dataLang === "en" ? "to" : "à"}
               <span className="font-medium">
                 {" "}
                 {currentPage * postsPerPage}{" "}
               </span>
-              of
-              <span className="font-medium"> {totalPosts} </span> results
+              {dataLang === "en" ? "of" : "àsur"}
+
+              <span className="font-medium"> {totalPosts} </span>
+              {dataLang === "en" ? "results" : "résultats"}
             </p>
           </div>
           <div>

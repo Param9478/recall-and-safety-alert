@@ -8,41 +8,25 @@ const projects = [
     name: "FOOD",
     icon: iconFood,
     category: 1,
-    href: "#",
     logoColor: "bg-red-600",
-    bgColor: "bg-red-400",
-    ctColor: "bg-red-100",
-    txtColor: "bg-red-800",
   },
   {
     name: "VEHICLE",
     icon: iconTransport,
     category: 2,
-    href: "#",
     logoColor: "bg-purple-600",
-    bgColor: "bg-purple-400",
-    ctColor: "bg-purple-100",
-    txtColor: "bg-purple-800",
   },
   {
     name: "CPS",
     icon: iconProducts,
     category: 4,
-    href: "#",
     logoColor: "bg-blue-500",
-    bgColor: "bg-blue-400",
-    ctColor: "bg-blue-100",
-    txtColor: "bg-blue-800",
   },
   {
     name: "HEALTH",
     icon: iconHealth,
     category: 3,
-    href: "#",
     logoColor: "bg-green-500",
-    bgColor: "bg-green-400",
-    ctColor: "bg-green-100",
-    txtColor: "bg-green-800",
   },
 ];
 
@@ -58,7 +42,7 @@ export default function SymbolCards({ setCategory }) {
           <div
             className={classNames(
               data.logoColor,
-              " text-white lg:w-20 lg:h-20 w-12 h-12 lg:mt-0 mt-3 rounded-full"
+              " text-white lg:w-20 lg:h-20 w-12 h-12 lg:mt-0 sm:mt-0 rounded-full"
             )}
           >
             <button type="button" onClick={() => setCategory(data.name)}>

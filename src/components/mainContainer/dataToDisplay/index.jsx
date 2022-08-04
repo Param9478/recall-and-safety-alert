@@ -3,7 +3,7 @@ import DataList from "./dataList";
 import NoDataFound from "./noDataFound";
 import Pagination from "../pagination";
 
-const DataToDisplay = ({ listData, currentPage, setCurrentPage, loading }) => {
+const DataToDisplay = ({ listData, currentPage, setCurrentPage, dataLang }) => {
   const [postsPerPage] = useState(3);
 
   const indexOfLastPost = currentPage * postsPerPage;
@@ -18,7 +18,7 @@ const DataToDisplay = ({ listData, currentPage, setCurrentPage, loading }) => {
     <div className="max-w-7xl mx-auto px-6">
       {currentPosts.length ? (
         <>
-          <DataList data={currentPosts} loading={loading} />
+          <DataList data={currentPosts} />
 
           <Pagination
             postsPerPage={postsPerPage}
@@ -28,6 +28,7 @@ const DataToDisplay = ({ listData, currentPage, setCurrentPage, loading }) => {
             paginateFront={paginateFront}
             paginateBack={paginateBack}
             indexOfLastPost={indexOfLastPost}
+            dataLang={dataLang}
           />
         </>
       ) : (
