@@ -1,6 +1,4 @@
 import SymbolCards from "./symbolsCards";
-// import ListboxFilter from "./listboxFilter";
-// import Motion from "./motion";
 
 const SearchBox = ({ setSearchedData, setCategory, dataLang }) => {
   return (
@@ -51,9 +49,6 @@ const SearchBox = ({ setSearchedData, setCategory, dataLang }) => {
                 </div>
               </div>
             </div>
-            {/* <div className="lg:mt-0 md:mt-0 mt-5">
-                <ListboxFilter />
-              </div> */}
           </div>
         </div>
       </div>

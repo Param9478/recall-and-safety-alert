@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "../../assets/gov-logo.png";
 import "./header.css";
 
@@ -8,20 +9,20 @@ export default function Header({ dataLang, setDataLang }) {
         <div className="flex justify-between h-16 px-6">
           <div className="flex">
             <div className="flex items-center">
-              <a href="/">
+              <Link to="/">
                 <img
                   className="block lg:hidden h-6 w-auto"
                   src={Logo}
                   alt="Workflow"
                 />
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/">
                 <img
                   className="hidden lg:block h-8 w-auto"
                   src={Logo}
                   alt="Workflow"
                 />
-              </a>
+              </Link>
             </div>
           </div>
           <div className="mt-4 flex md:ml-4">
@@ -34,6 +35,7 @@ export default function Header({ dataLang, setDataLang }) {
             </button>
             <button
               type="button"
+              onClick={() => setDataLang(dataLang === "en" ? "fr" : "en")}
               className="block lg:hidden items-center px-2 sm:px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-blue-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-offset-2 focus:ring-0"
             >
               {dataLang === "en" ? "FR" : "EN"}
