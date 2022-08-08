@@ -73,11 +73,11 @@ const DataDescription = ({ selectedDataId, dataLang }) => {
                         dangerouslySetInnerHTML={{
                           __html: panel?.text,
                         }}
-                        className="text-lg py-2"
+                        className="text-lg py-2 overflow-x-hidden"
                       ></p>
                       {panel?.data?.map((src) => (
                         <div key={src.fullUrl}>
-                          <img src={src.fullUrl} alt="productImg" />
+                          {/* <img src={src.fullUrl} alt="productImg" /> */}
                         </div>
                       ))}
                     </div>

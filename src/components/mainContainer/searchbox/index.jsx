@@ -3,7 +3,7 @@ import SymbolCards from "./symbolsCards";
 const SearchBox = ({ setSearchedData, setCategory, dataLang }) => {
   return (
     <div className="lg:flex lg:items-center lg:space-x-10">
-      <div className="lg:rounded-br-[8rem] border-t md:rounded-none overflow-hidden shadow lg:w-3/4 md:h-64 h-48 bg-[#6D6E71]">
+      <div className="lg:rounded-br-[8rem] border-t md:rounded-none overflow-hidden shadow lg:w-3/4 md:h-64 h-48 bg-[#6D6E71] mb-2">
         <div className="flex-1 lg:max-w-4xl mx-auto px-6">
           <h2 className="sr-only" id="profile-overview-title">
             Search Box
@@ -23,7 +23,8 @@ const SearchBox = ({ setSearchedData, setCategory, dataLang }) => {
                   type="text"
                   name="search"
                   id="search"
-                  className="shadow-sm focus:outline-none p-3 sm:p-2 block w-full pr-12 sm:text-sm border-gray-300 rounded-3xl"
+                  placeholder="search"
+                  className="shadow-sm focus:outline-none p-3 sm:p- block w-full pr-12 sm:text-sm border-gray-300 rounded-3xl"
                   onChange={(e) =>
                     setSearchedData(e.target.value.toLocaleLowerCase())
                   }

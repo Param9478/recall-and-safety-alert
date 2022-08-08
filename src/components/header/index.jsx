@@ -43,7 +43,7 @@ export default function Header({ dataLang, setDataLang }) {
           </div>
         </div>
       </div>
-      <div className="flex items-center w-full title-bg p-5 mt-3 h-24">
+      <div className="flex items-center w-full title-bg mt-3 h-24">
         <div className="flex-1 min-w-0 max-w-7xl mx-auto px-6">
           <h2 className="text-2xl leading-7 text-white sm:truncate">
             {dataLang === "en"
